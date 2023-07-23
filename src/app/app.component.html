@@ -1,0 +1,55 @@
+<!-- <h3>life cycle hooks</h3>
+<input type="text" #val>
+<button (click)="save(val)">submit</button>
+<app-child *ngIf="destroyCycle" [myValue]="value"></app-child>
+<br><br>
+<button (click)="destroy()">Destroy</button> -->
+
+<!-- <app-class-style></app-class-style> -->
+
+<table cellpadding="10px" cellspacing="0px" border="1px solid black">
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Company</th>
+        <th>Status</th>
+        <th>Phone</th>
+        <th>Balance</th>
+        <th>Friends</th>
+        <th>Tags</th>
+    </tr>
+    <tr *ngFor="let arr of array let i=index">
+        <td>{{arr.name}}</td>
+        <td>{{arr.age}}</td>
+        <td>{{arr.company}}</td>
+        <td>{{arr.isActive ? 'online': 'ofline'}}</td>
+        <td>{{arr.phone}}</td>
+        <td>{{arr.balance}}</td>  
+        <td><button (click)="friendData(arr)">Friends</button></td>
+        <td><button (click)="tagsData(arr)" >Tag</button></td>
+        
+
+        
+    </tr>
+</table><br><br>
+
+<button (click)="showEmail()">show data</button>
+<div *ngIf="show">
+  <select>
+    <option *ngFor="let arr of array">
+      {{ arr.email }}
+    </option>
+  </select>
+</div><br><br>
+
+
+
+<div *ngFor="let friend of abc">{{friend.name}}</div>
+
+
+
+<h3 *ngIf="riz"> Tags of:&nbsp;&nbsp;&nbsp;{{riz}}</h3>
+<div *ngFor="let tag of tagData">{{tag}}</div>
+
+
+
